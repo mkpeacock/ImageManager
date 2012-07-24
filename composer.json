@@ -1,0 +1,26 @@
+{
+    "name": "centralapps/image-manager",
+    "type": "library",
+    "description": "Image Management Tool",
+    "keywords": [],
+    "homepage": "http://michaelpeacock.co.uk",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Michael Peacock",
+            "email": "mkpeacock@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "psr-0": { "CentralApps\\ImageManager": "" }
+    },
+    "target-dir": "CentralApps/ImageManager",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
