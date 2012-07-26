@@ -115,14 +115,14 @@ class Tools
 		        
 		        if( in_array( $ext, $this->uploadExtentions ) ) {
 			        if( in_array( $_FILES[ $postfield ]['type'], $this->uploadTypes ) ) {
-				        	$name = str_replace( ' ', '', $_FILES[ $postfield ]['name'] );
-				        	$this->name = $namePrefix . $name;
-				        	$path = $moveto . $name;
-				        	
-				        	move_uploaded_file( $_FILES[ $postfield ]['tmp_name'] , $path );
-				        	
-				        	$this->loadFromFile( $path );
-				        	return true;
+			        	$name = str_replace( ' ', '', $_FILES[ $postfield ]['name'] );
+			        	$this->name = $namePrefix . $name;
+			        	$path = $moveto . $name;
+			        	
+			        	move_uploaded_file( $_FILES[ $postfield ]['tmp_name'] , $path );
+			        	
+			        	$this->loadFromFile( $path );
+			        	return true;
 			        } else {
 						throw new \Exception("Invalid image type");
 				        return false;
